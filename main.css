@@ -1,0 +1,77 @@
+/* Smooth transition for theme changes */
+body, .bg-body-tertiary, .modal-content {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif !important;
+    /* background: #f2f6e9; */
+}
+.navbar {
+    background:#9146b4;
+}
+.nav-link {
+    margin-right: 1em !important;
+}
+
+.nav-link:hover {
+    color: #000 !important;
+}
+.navbar-collapse {
+    justify-content: flex-end;
+}
+
+
+/* Task Card Styling */
+.task-card {
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out, border-color 0.3s ease;
+    border-width: 2px;
+}
+
+.task-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+/* Completed Task Styling */
+.task-card.completed {
+    border-color: #198754; /* Bootstrap success green */
+    opacity: 0.7;
+}
+
+.task-card.completed .card-title {
+    text-decoration: line-through;
+}
+#btn1{
+    background-color: #9055ac;
+    border-radius: 5px;
+    border: none;
+    padding: 0.5%;
+}
+#btn1:hover{
+    border: 1px solid #9055ac;
+    background-color: #c3bac6;
+    color: #2d1638;
+}
+
+
+/* Fade-out animation for deleted tasks */
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+}
+
+.task-card.deleting {
+    animation: fadeOut 0.5s forwards;
+}
+
+.task-card.deleting {
+    animation: fadeOut 0.5s forwards;
+}

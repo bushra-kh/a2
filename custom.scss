@@ -1,0 +1,35 @@
+@import "node_modules/bootstrap/scss/bootstrap.scss";
+
+.navbar {
+  color: $indigo-900;
+  background-color: $indigo-300;
+  min-height: 6em; 
+  background-image: radial-gradient(circle, rgb(228, 185, 185) 5%, rgb(157, 226, 231) 65%, rgb(185, 111, 219) 140%);
+  
+}
+.nav-link {
+    text-shadow: 1px 1px 2px rgb(36, 35, 35), 0 0 25px rgb(87, 87, 212), 0 0 5px rgb(230, 161, 224);
+}
+.navbar-brand{
+    border-style: dotted hidden  dotted hidden;
+    color: white;
+    text-shadow: 1px 1px 2px rgb(62, 161, 214), 0 0 25px blue, 0 0 5px red;
+} 
+body{
+  background-color: $green-100;
+}
+// .input-card{
+//     background-color: #93c0c2;
+// }
+[data-bs-theme="dark"] {
+  body {
+    background-color: #323232 !important;
+    color: #fff !important;
+  }
+
+  .bg-body-tertiary { background-color: #111 !important; color: #e9ecef !important; }
+  .card, .modal-content { background-color: #121212 !important; color: #f1f1f1 !important; border-color: rgba(255,255,255,0.06) !important; }
+  .form-control, .form-select { background-color: #1b1b1b !important; color: #fff !important; border-color: #333 !important; }
+  .btn-outline-info { color: #bfe8ff !important; border-color: #2a8bd6 !important; }
+  .navbar, .navbar .navbar-brand, .navbar .nav-link, .form-check-label { color: #fff !important; }
+}

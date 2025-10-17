@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 2</title>
+    <link rel="stylesheet" href="bootstrap-5.3.8-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <!-- <link rel="stylesheet" href="custom.scss"> -->
+    <link rel="stylesheet" href="custom.css">
+</head>
+<body>
+
+                                        <!-- NABVAR  -->
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-sm" >
+        <div class="container">
+             <a class="navbar-brand" href="#" style="font-weight: 800;"><em>next up?</em></a> <!-- brand name -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-navbar-collapse" aria-controls="main-navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="main-navbar-collapse">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" style="color: #ffffff ;" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" style="color: #ffffff ;" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" style="color: #ffffff ;" href="#">Contact</a>
+                    </li>
+                </ul>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="theme-toggle">
+                    <label class="form-check-label text-light" for="theme-toggle">Dark Mode</label>
+                </div>
+            </div>
+        </div>
+    </nav>
+                                        <!-- BODY -->
+    <main class="container mt-5">
+                            <!-- TASK INPUT SECTION -->
+        <section class="mb-5 p-4 bg-body-tertiary rounded-3 shadow-sm">
+            <h2 class="mb-3">Set up a quick Task</h2>
+            <form id="task-form">
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <label for="task-title" class="form-label">Task Title</label>
+                        <input type="text" class="form-control" id="task-title" placeholder="e.g., Finish project report" required>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="task-category" class="form-label">Category</label>
+                        <input type="text" class="form-control" id="task-category" placeholder="e.g., Work" required>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="task-due-date" class="form-label">Due Date</label>
+                        <input type="date" class="form-control" id="task-due-date" required>
+                    </div>
+                </div>
+                <button type="submit"  class="btn btn-info mt-3">Add Task</button>
+                
+                
+            </form>
+        </section>
+
+        <section class="d-flex justify-content-end align-items-center mb-4 gap-3">
+            <label for="filter-status" class="form-label mb-0">Filter by Status:</label>
+            <select class="form-select w-auto" id="filter-status">
+                <option value="all">All</option>
+                <option value="completed">Completed</option>
+                <option value="pending">Pending</option>
+            </select>
+        </section>
+
+
+        <section>
+            <h2 class="mb-3">Your Tasks</h2>
+            <div id="task-display-area" class="row g-4">
+                </div>
+        </section>
+
+    </main>
+
+    <div class="modal fade" id="editTaskModal" tabindex="-1" aria-labelledby="editTaskModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editTaskModalLabel">Edit Task</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="edit-task-form">
+                        <input type="hidden" id="edit-task-id">
+                        <div class="mb-3">
+                            <label for="edit-task-title" class="form-label">Task Title</label>
+                            <input type="text" class="form-control" id="edit-task-title" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="edit-task-category" class="form-label">Category</label>
+                            <input type="text" class="form-control" id="edit-task-category" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="edit-task-due-date" class="form-label">Due Date</label>
+                            <input type="date" class="form-control" id="edit-task-due-date" required>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="save-edit-btn">Save Changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script>
+</BODY>
+</html>
+<!-- 
+    </div>
+
+
+        <script src="bootstrap-5.3.8-dist/js/bootstrap.min.js"></script>
+</div>
+</html> -->
